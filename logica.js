@@ -22,13 +22,13 @@ formulario.addEventListener('submit', (event) => {
     setTimeout(() => {
         let nombre = document.querySelector('#nombre').value
         let edad = document.querySelector('#edad').value
-        let email = document.querySelector('#email').value
+        // let email = document.querySelector('#email').value
         let sms = document.querySelector('#sms').value
         let mensaje = 'send?phone=' + telefono + 
         '&text=*Hola soy*%0A' + nombre + '' // Nombre y apellido
-        + '%0A*Tengo*%0A' + edad + ' años' //Edad
-        + '%0A*Tu mensaje*%0A' + sms    // Mesaje
-        + '%0A*¿Mi correo es*%0A' + email + '' //Email
+        + '%0A*Mi Numero de Cedula es*%0A' + edad + '' //Edad
+        + '%0A*Quiero consulta sobre*%0A' + sms    // Mesaje
+        // + '%0A*¿Mi correo es*%0A' + email + '' //Email
         if(isMobile()) {
             window.open(urlMobile + mensaje, '_blank')
         }else{
